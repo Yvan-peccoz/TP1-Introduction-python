@@ -3,7 +3,6 @@ fromage = 800.0 # = qty de fromage en gramme par personne
 eau = 2
 ail = 2
 pain = 400
-
 nb_ppl = int(input("."))
 fromage = fromage*nb_ppl/base
 eau = eau*nb_ppl/base
