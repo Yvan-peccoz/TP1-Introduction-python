@@ -102,14 +102,50 @@ def exo5():
 
 def exo6():
     lst = [5, 2, 4, 8, 1, 3]
-    m = lst[0]
-    id = 0
-    for i in range(1,len(lst)):
+    for i in range(0,len(lst)):
+        m = lst[i]
+        _id = i
         print(lst)
         for j in range(i+1,len(lst)):
-            if lst[j]< m:
+            if lst[j] < m:
                 m = lst[j]
-                id = j
-        lst[i], lst[id] = lst[id], lst[i]
+                _id = j
+        lst[i], lst[_id] = lst[_id], lst[i]
 
-exo6()
+
+#exo6()
+
+# exercice n7:
+def exo7():
+    binome=("yvan.uha", "matteo.uha")
+    print("L'étudiant",binome[0],"est en binome avec l'étudiant", binome[1])
+    #comme l'ajout, modification et suppression ne marche pas j'ai effacer la site du programme
+#exo7()
+
+def exo8():
+    dico ={}
+    doci = {}
+    dico['name'] = 'PECCOZ'
+    dico['firstname'] = 'Yvan'
+    dico['promo'] = '2026'
+    dico['group'] = '132'
+    doci['name'] = 'GUUU'
+    doci['firstname'] = 'MATTEO'
+    doci['group'] = '131'
+
+    binome={"1":dico, "2":doci}
+
+    #print(f"votre nom est {dico['name']}, prénom est  {dico['firstname']}, vous faites partie de la promo {dico['promo']} et votre groupe est  {dico['group']}")
+    print("Les clés du dictionnaire sont :")
+    for i in dico.values():
+        print(f"- {i}")
+    print("Les valeurs du dictionnaire sont : ")
+    for i in dico.keys():
+        print(f"- {i}")
+    print("Les tuplets du dictionnaire sont :")
+    for i, j in dico.items():
+        print(f"- ({i},{j})")
+    print("Les étudiants formants le binôme sont :")
+    print("L'étudiant ",binome["1"]["name"], binome["1"]["firstname"],"du groupe", binome["1"]["group"])
+    print("L'étudiant ",binome["2"]["name"], binome["2"]["firstname"],"du groupe", binome["2"]["group"])
+exo8()
