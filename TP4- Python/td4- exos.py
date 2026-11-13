@@ -26,10 +26,10 @@ def Moy():
     print(f"Numéro de l’Etudiant | note | écart a la moyenne")
     for i in range(nombreEtudiants):
         print(f"{i} | {notes[i]} | {notes[i]-moyenne}")
-#Moy()
-
+# Moy()
+#
 #- ------------------- EXO N°2 :
-def Scal(nMax=3):
+def Scal(nMax=4):
     v1 = []
     v2 = []
     scal = 0
@@ -45,7 +45,7 @@ def Scal(nMax=3):
         scal += v1[i]*v2[i]
     print(f"\nLe produit scalaire de v1 par v2 vaut 39.0")
 
-#Scal()
+# Scal()
 
 def exo4_1():
     lst = [2, 7, 5, 6, 7, 1, 6, 2, 1, 7]
@@ -65,7 +65,7 @@ def exo4_1():
     print(f"le nombre le plus fréquent est : {valf} ({cmpf} x)")
 #exo4_2()
 def exo4_2():
-    lst = [2, 7, 5, 6, 7, 1, 6, 2, 1, 7]
+    lst = [2, 55, 7, 55, 36, 7, 21, 56, 55, 3, 7, 6,2, 55, 7, 55, 36, 7, 21, 56, 55, 3, 7, 6,2, 55, 7, 55, 36, 7, 21, 56, 55, 3, 7, 6,2, 55, 7, 55, 36, 7, 21, 56, 55, 3, 7, 6,2, 55, 7, 55, 36, 7, 21, 56, 55, 3, 7]
     valf = lst[0]
     cmpf = 0
     for i in range(1,len(lst)):
@@ -74,8 +74,8 @@ def exo4_2():
             cmpf = cmpt
             valf = lst[i]
     print(f"le nombre le plus fréquent est : {valf} ({cmpf} x)")
-
-#exo4_2()
+#
+# exo4_2()
 
 def exo5():
     test = False
@@ -98,7 +98,7 @@ def exo5():
                     test = True
     return(test)
 
-#print(exo5())
+# print(exo5())
 
 def exo6():
     lst = [5, 2, 4, 8, 1, 3]
@@ -148,4 +148,4 @@ def exo8():
     print("Les étudiants formants le binôme sont :")
     print("L'étudiant ",binome["1"]["name"], binome["1"]["firstname"],"du groupe", binome["1"]["group"])
     print("L'étudiant ",binome["2"]["name"], binome["2"]["firstname"],"du groupe", binome["2"]["group"])
-exo8()
+#exo8()
