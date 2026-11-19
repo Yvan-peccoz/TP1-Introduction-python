@@ -50,7 +50,7 @@ def validatestr():
         print("Palindrome")
     else:
         print("Pas Palindrome")
-# validatestr()
+validatestr()
 
 def exo4():
     sum = int(input())
