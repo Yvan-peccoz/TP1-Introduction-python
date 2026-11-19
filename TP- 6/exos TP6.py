@@ -25,22 +25,23 @@ print(lst1, id(lst1), type(lst1))
 print(lst2, id(lst2), type(lst2))
 #LST1 = LST2 donc leurs id sont egaux...
 
+
+
+
+
+
 # Que l'on soit d'accord je sais q'uimporter au milieu du porgramme une librairie n'est pas propre mais comme j'avance avec 1
 # Seul document je prefere donc faire comme si a chaque debut d'exos je suis au debut d'un nouveau script
-from math import floor
-def exo5():
-    inp = str(input("Entrez un mot ou une phrase :"))
-    phrase = ""
-    test = False
-    for i in inp:
-        if i.isalpha():
-            phrase += i
-    phrase = phrase.lower()
-    for i in range(floor(len(phrase)/2)):
-        if phrase[i] != phrase[-(i+1)]:
-            test = True
-    if test == False:
-        print("Palindrome")
-    else:
-        print("Pas Palindrome")
-exo5()
+
+def exo5(t):
+    t.lower()
+    char_delete = ",.!/:;&'"
+    char_accent = "éèêëàä"
+    char_format= "eeeeaa"
+    for i in char_delete:
+        t.replace(i,"")
+    for i in char_accent:
+        t.replace(i,char_format[i])
+    print(t)
+
+exo5("Ta bête te bat")
