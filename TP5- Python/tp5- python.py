@@ -51,7 +51,7 @@ def validatestr():
     else:
         print("Pas Palindrome")
 validatestr()
-
+#
 def exo4():
     sum = int(input())
     dico= {"100":0, "50":0, "10":0, "2":0, "1":0}
