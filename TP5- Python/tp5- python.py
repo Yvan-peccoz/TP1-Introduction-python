@@ -96,21 +96,39 @@ def exo6():
     for i in txt:
         count+=1
     count_v = 0
-    mot = 0
+    count_wagon = 0
+    _str = ""
+    for i in txt: ## j'enleve les char non-alpha
+        if i.isalpha() or i == " ":
+            _str += i
+    _str = _str.split(" ")
     txt = txt.lower()
     for i in txt:
         if i in ["a","i","u","e","o"]:
             count_v += 1
-
-
+    for i in _str:
+        if i.lower() == "wagon":
+            count_wagon += 1
+            print(i)
     print(count_v)
     print(count)
-# exo6()
+    print(count_wagon)
+#exo6()
 
 import os.path as p
+import time
 def exo7():
-    path = str(input())
-    if p.isfile(path):
-        return (True)
+    path = [str(input("path1:")), str(input("path2:"))]
+    check_path = [False, False]
+    for i in range(len(path)):
+        if p.isfile(path[i]):
+            check_path[i] = True
+            print(f"Taille fichier {i+1} : {p.getsize(i)}")
+    if check_path[0] and check_path[1]:
+        t1 = p.getmtime(path[0])
+        t2 = p.getmtime(path[1])
+    if t1 > t2:
+        print(f"le fichier le plus récent est le 1 avec une date de modif : {time.ctime(t1)}")
     else:
-        return
+        print(f"le fichier le plus récent est le 2 avec une date de modif : {time.ctime(t2)}")
+#exo7()
